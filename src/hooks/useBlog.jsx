@@ -7,12 +7,12 @@ function useBlog() {
 
     const state = {
         menuActive
-    }
-    const setState = {
-        setMenuActive
-    }
+    };
+    const stateUpdaters = {
+      setMenuActive,
+    };
 
-    return(state, setState)
+    return {state, stateUpdaters}
 }
 
 export {useBlog}
