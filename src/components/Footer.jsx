@@ -43,7 +43,7 @@ function Footer() {
             </Link>
           </article>
         </section>
-        <section className="grid justify-items-center  mb-10">
+        <section className="grid justify-items-center mb-10">
           <img
             className="scal"
             src={logoDoble}
