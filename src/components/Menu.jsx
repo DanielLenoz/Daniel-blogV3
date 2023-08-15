@@ -1,6 +1,5 @@
 import React from "react";
-import { RiMenu3Fill } from "react-icons/ri";
-import { RiCloseFill } from "react-icons/ri";
+import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import logoAzul from "../assets/icons/logo-azul.svg";
 import { NavLink } from "react-router-dom";
 import "../style/animaction.css";
@@ -14,8 +13,8 @@ function Menu() {
   const { menuActive } = state;
 
   const toggle = () => {
-    setMenuActive(!menuActive)
-  }
+    setMenuActive(!menuActive);
+  };
 
   return (
     <>
@@ -24,15 +23,15 @@ function Menu() {
           src={logoAzul}
           alt="mode change"
         />
-        <section className="relative lg:hidden">
+        <section className="relative  lg:hidden ">
           {!menuActive ? (
             <RiMenu3Fill
-              className="w-8 h-8  absolute right-0 -bottom-4"
+              className="w-8 h-8 absolute right-0 -bottom-4 "
               onClick={toggle}
             />
           ) : (
             <RiCloseFill
-              className="w-8 h-8  absolute right-0 -bottom-4"
+              className="w-8 h-8 absolute right-0 -bottom-4 "
               onClick={toggle}
             />
           )}
@@ -40,7 +39,7 @@ function Menu() {
       </section>
 
       <section className="hidden justify-center h-screen sticky bg-slate-100 z-10 lg:grid">
-        <ul className="grid gap-1 my-32">
+        <ul className="grid gap-1 my-32 text-2xl">
           {routes.map((routes) => {
             return (
               <MuneList
@@ -55,7 +54,7 @@ function Menu() {
 
       {!!menuActive && (
         <section className="grid justify-center h-screen sticky bg-slate-100 z-10">
-          <ul className="grid gap-1 my-32">
+          <ul className="grid gap-1 my-32 text-2xl font-carter">
             {routes.map((routes) => {
               return (
                 <MuneList
@@ -75,7 +74,7 @@ function Menu() {
 function MuneList({ routes, activeStyle }) {
   return (
     <li
-      className="text-center font-carter text-2xl font-normal"
+      className="text-center ont-normal"
       key={routes.text}
     >
       <NavLink
@@ -111,4 +110,4 @@ const routes = [
   },
 ];
 
-export { Menu };
+export { Menu, MuneList, routes };

@@ -1,5 +1,5 @@
 .up {
-    animation: up infinite 2s;
+    animation: up infinite 2s cubic-bezier(0, 0, 0.72, 0.95);
 }
 
 @keyframes up {
@@ -8,5 +8,38 @@
     }
     10%{
         border-bottom-left-radius: 2rem;
+    }
+}
+
+.jek:hover {
+    transform-origin: bottom;
+    animation: jek 2s infinite;
+}
+
+@keyframes jek {
+    30%{
+        transform: rotate(-40deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    80%{
+        transform: rotate(-40deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+.scal{
+    animation: scal 3s infinite ease-in-out;
+}
+
+@keyframes scal {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
     }
 }
