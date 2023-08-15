@@ -1,0 +1,12 @@
+.up {
+    animation: up infinite 2s;
+}
+
+@keyframes up {
+    0%{
+        border-bottom-left-radius: 0;
+    }
+    10%{
+        border-bottom-left-radius: 2rem;
+    }
+}

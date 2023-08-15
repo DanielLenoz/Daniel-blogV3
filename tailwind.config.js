@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'carter': ['"Carter One"', 'sans-serif'],
+        'oswald': ['Oswald', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
