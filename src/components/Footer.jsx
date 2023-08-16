@@ -1,21 +1,21 @@
-import React from "react";
-import { ImLinkedin2, ImGithub } from "react-icons/im";
-import logoDoble from "../assets/icons/logo-doble.svg";
-import "../style/animaction.css";
-import { MuneList, routes } from "./Menu";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { ImLinkedin2, ImGithub } from 'react-icons/im'
+import logoDoble from '../assets/icons/logo-doble.svg'
+import '../style/animaction.css'
+import { MuneList, routes } from './Menu'
+import { Link } from 'react-router-dom'
 
 function Footer() {
-  const activeStyle = "border-b-4 border-sky-500 up";
+  const activeStyle = 'border-b-4 border-sky-500 up'
 
   return (
     <>
-      <footer className=" bg-zinc-900 text-slate-100 grid justify-items-center ">
-        <p className=" font-roboto text-center mt-12 mx-12">
+      <footer className=" grid justify-items-center bg-zinc-900 text-slate-100 ">
+        <p className=" mx-12 mt-12 text-center font-roboto">
           La abundancia de la lectura hace a las personas ver un mundo que nadie
           puede ver
         </p>
-        <ul className="grid gap-7 my-16 text-base font-roboto">
+        <ul className="my-16 grid gap-7 font-roboto text-base">
           {routes.map((routes) => {
             return (
               <MuneList
@@ -23,37 +23,33 @@ function Footer() {
                 routes={routes}
                 activeStyle={activeStyle}
               />
-            );
+            )
           })}
         </ul>
-        <section className="grid justify-center mb-10 group">
-          <p className=" text-base text-center transition ease-in delay-150 font-normal mb-3 border-b-4 border-transparent group-hover:border-b-4 group-hover:border-sky-500 ">
+        <section className="group mb-10 grid justify-center">
+          <p className=" mb-3 border-b-4 border-transparent text-center text-base font-normal transition delay-150 ease-in group-hover:border-b-4 group-hover:border-sky-500 ">
             Contact
           </p>
           <article className="flex space-x-4">
             <Link
               to={
-                "https://www.linkedin.com/in/daniel-steven-rodriguez-verano-417472241/"
+                'https://www.linkedin.com/in/daniel-steven-rodriguez-verano-417472241/'
               }
             >
-              <ImLinkedin2 className="jek w-12 h-12" />
+              <ImLinkedin2 className="jek h-12 w-12" />
             </Link>
-            <Link to={"https://github.com/DanielLenoz"}>
-              <ImGithub className="jek w-12 h-12" />
+            <Link to={'https://github.com/DanielLenoz'}>
+              <ImGithub className="jek h-12 w-12" />
             </Link>
           </article>
         </section>
-        <section className="grid justify-items-center mb-10">
-          <img
-            className="scal"
-            src={logoDoble}
-            alt=""
-          />
-          <p className="text-center font-carter pt-1">© 2023 Daniel</p>
+        <section className="mb-10 grid justify-items-center">
+          <img className="scal" src={logoDoble} alt="" />
+          <p className="pt-1 text-center font-carter">© 2023 Daniel</p>
         </section>
       </footer>
     </>
-  );
+  )
 }
 
-export { Footer };
+export { Footer }
