@@ -5,22 +5,25 @@ import '../style/gradients.css'
 
 function Home() {
   return (
-    <main>
+    <main className="bg-slate-100 px-5 pb-8 pt-5">
       {blogData
         .map((blog) => {
           return (
-            <section
-              className="mx-5 grid justify-items-center"
-              key={blog.title}
-            >
+            <section className="grid justify-items-center" key={blog.title}>
               <section className="relative">
                 <div className="diamond absolute -right-20 -top-24 h-48 w-44"></div>
                 <figure className="relative z-10">
-                  <img
-                    src={blog.imgIphone}
-                    alt={blog.altDescription}
-                    className=" h-52 w-80 "
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:945px)"
+                      srcSet={blog.imgDesktop}
+                    />
+                    <img
+                      className="rounded-2xl bg-cover bg-center bg-no-repeat"
+                      src={blog.imgIphone}
+                      alt={blog.altDescription}
+                    />
+                  </picture>
                 </figure>
                 <div className="diamond absolute -bottom-24 -left-24 h-48 w-44"></div>
               </section>
@@ -42,7 +45,7 @@ function Home() {
                 <p className="font-robot text-base font-normal leading-6 text-zinc-950">
                   {blog.description}
                 </p>
-                <article className="flex justify-between">
+                <article className="mt-2 flex justify-between">
                   <NavLink
                     className="gradient-leer font-roboto text-base font-normal"
                     to={`/blog/${blog.title}`}
@@ -58,6 +61,11 @@ function Home() {
           )
         })
         .slice(0, 1)}
+
+      <h2 className=" text-center font-oswald text-xl font-bold mt-10">
+        solo la lectura hace creser el alma para comprender sabiduría y
+        emocionarnos con cada historia
+      </h2>
     </main>
   )
 }
