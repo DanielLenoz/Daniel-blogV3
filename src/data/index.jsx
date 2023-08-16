@@ -4,7 +4,8 @@ const blogs = '#9959ee'
 
 const blogData = [
   {
-    imgSrc: './src/img/img-blog/img-iphone/ducha-fria.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/ducha-fria-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/ducha-fria.jpg',
     altDescription: 'Duchas Frias',
     title: 'Duchas Frias',
     hashtag: '#Blogs',
@@ -15,7 +16,8 @@ const blogData = [
     date: '29 abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/lectura-ligera.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/lectura-ligera-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/lectura-ligera.jpg',
     altDescription: 'Un Rato De Lectura',
     title: 'Un Rato De Lectura',
     hashtag: '#Blogs',
@@ -26,7 +28,8 @@ const blogData = [
     date: '28 Abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/blog-v2.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/blog-v2-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/blog-v2.jpg',
     altDescription: 'Projecto Blog V2',
     title: 'Projecto Blog V2',
     hashtag: '#Projects',
@@ -37,7 +40,8 @@ const blogData = [
     date: '28 Abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/portafolio-v2.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/portafolio-v2-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/portafolio-v2.jpg',
     altDescription: 'Portafolio V2',
     title: 'Portafolio V2',
     hashtag: '#Projects',
@@ -48,7 +52,8 @@ const blogData = [
     date: '28 Abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/la-luz.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/la-luz-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/la-luz.jpg',
     altDescription: 'Los de la luz',
     title: 'Los de la luz',
     hashtag: '#Blogs',
@@ -59,7 +64,8 @@ const blogData = [
     date: '27 Abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/mente-cresimiento.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/mente-cresimiento-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/mente-cresimiento.jpg',
     altDescription: 'una mente en cresimiento',
     title: 'una mente en cresimiento',
     hashtag: '#Blogs',
@@ -70,7 +76,8 @@ const blogData = [
     date: '26 Abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/AI-amiga.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/AI-amiga-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/AI-amiga.jpg',
     altDescription: 'Revolutionizing Work',
     title: 'Revolutionizing Work',
     hashtag: '#Blogs',
@@ -81,7 +88,8 @@ const blogData = [
     date: '26 Abril 2023',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/rios-card.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/rios-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/rios.jpg',
     altDescription: 'KNOWLEDGE´S RIVERS',
     title: 'KNOWLEDGE´S RIVERS',
     hashtag: '#Blogs',
@@ -92,7 +100,8 @@ const blogData = [
     date: '15 Octubre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/platzi-conf-22-card.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/platzi-conf-22-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/platzi-conf-22.jpg',
     altDescription: 'PLATZI CONF 22',
     title: 'KPLATZI CONF 22',
     hashtag: '#Events',
@@ -103,7 +112,8 @@ const blogData = [
     date: '26 Septiembre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/portafolio.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/portafolio-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/portafolio.jpg',
     altDescription: 'proyecto portafolio',
     title: 'PORTAFOLIO',
     hashtag: '#Projects',
@@ -114,7 +124,8 @@ const blogData = [
     date: '3 Septiembre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/metaverso-card.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/metaverso-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/metaverso.jpg',
     altDescription: 'EL METAVERSO blog',
     title: 'EL METAVERSO',
     hashtag: '#Blogs',
@@ -125,7 +136,8 @@ const blogData = [
     date: '3 Septiembre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/platzi-conf-card.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/platzi-conf-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/platzi-conf.jpg',
     altDescription: 'PLATZI CONF ESPAÑA',
     title: 'PLATZI CONF ES',
     hashtag: '#Events',
@@ -136,7 +148,8 @@ const blogData = [
     date: '3 Septiembre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/proyect-blog.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/proyect-blog-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/proyect-blog.jpg',
     altDescription: 'PROYECTO BLOG',
     title: 'PROYECTO BLOG',
     hashtag: '#Projects',
@@ -147,7 +160,8 @@ const blogData = [
     date: '3 Septiembre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/first-animacion.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/first-animacion-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/first-animacion.jpg',
     altDescription: 'primer proyecto de animacion',
     title: 'FIRST ANIMATION',
     hashtag: '#Projects',
@@ -158,7 +172,8 @@ const blogData = [
     date: '3 Septiembre 2022',
   },
   {
-    imgSrc: './src/img/img-blog/img-iphone/batata-bit.jpg',
+    imgDesktop: './src/assets/img/img-blogs/img-desktop/batata-bit-full.jpg',
+    imgIphone: './src/assets/img/img-blogs/img-iphone/batata-bit.jpg',
     altDescription: 'proyecto cripto moneda',
     title: 'BATATA-BIT',
     hashtag: '#Projects',

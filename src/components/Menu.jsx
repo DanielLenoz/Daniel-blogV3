@@ -17,10 +17,10 @@ function Menu() {
   }
 
   return (
-    <>
-      <section className="z-10 flex items-center justify-between bg-slate-100 px-5 ">
+    <header>
+      <nav className="relative z-10 flex items-center justify-between bg-slate-100 px-5 ">
         <img src={logoAzul} alt="mode change" />
-        <section className="relative  lg:hidden ">
+        <section className="relative lg:hidden ">
           {!menuActive ? (
             <RiMenu3Fill
               className="absolute -bottom-4 right-0 h-8 w-8 "
@@ -33,7 +33,7 @@ function Menu() {
             />
           )}
         </section>
-      </section>
+      </nav>
 
       <section className="sticky z-10 hidden h-screen justify-center bg-slate-100 lg:grid">
         <ul className="my-32 grid gap-1 text-2xl">
@@ -64,13 +64,13 @@ function Menu() {
           </ul>
         </section>
       )}
-    </>
+    </header>
   )
 }
 
 function MuneList({ routes, activeStyle }) {
   return (
-    <li className="ont-normal text-center" key={routes.text}>
+    <li className="text-center font-normal" key={routes.text}>
       <NavLink
         className={({ isActive }) => (isActive ? activeStyle : undefined)}
         to={routes.to}
