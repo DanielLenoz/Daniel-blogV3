@@ -58,6 +58,7 @@ function Menu() {
                   key={routes.to}
                   routes={routes}
                   activeStyle={activeStyle}
+                  onClick={() => toggle()}
                 />
               )
             })}
@@ -68,12 +69,13 @@ function Menu() {
   )
 }
 
-function MuneList({ routes, activeStyle }) {
+function MuneList({ routes, activeStyle, onClick }) {
   return (
     <li className="text-center font-normal" key={routes.text}>
       <NavLink
         className={({ isActive }) => (isActive ? activeStyle : undefined)}
         to={routes.to}
+        onClick={onClick}
       >
         {routes.text}
       </NavLink>
