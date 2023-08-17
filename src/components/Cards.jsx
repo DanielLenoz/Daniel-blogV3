@@ -1,12 +1,13 @@
 import React from 'react'
-import { blogData } from '../data'
+// import { blogData } from '../data'
 import { NavLink } from 'react-router-dom'
 import '../style/gradients.css'
-
-const cardBlogs = [...blogData]
-const newCardBlogs = cardBlogs.shift()
+import { useBlog } from '../hooks/useBlog'
 
 function Cards() {
+  const { state } = useBlog()
+  const { cardBlogs } = state
+
   return (
     <section className="grid justify-center gap-4 md:grid-cols-2 xl:grid-cols-3">
       {cardBlogs.map((blog) => {
