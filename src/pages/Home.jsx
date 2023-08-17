@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { blogData } from '../data'
 import '../style/gradients.css'
+import { Cards } from '../components/Cards'
 
 function Home() {
   return (
@@ -47,7 +48,7 @@ function Home() {
                 </p>
                 <article className="mt-2 flex justify-between">
                   <NavLink
-                    className="gradient-leer font-roboto text-base font-normal"
+                    className="gradient-leer font-roboto text-base font-bold"
                     to={`/blog/${blog.title}`}
                   >
                     Leer mas
@@ -66,6 +67,8 @@ function Home() {
         solo la lectura hace creser el alma para comprender sabiduría y
         emocionarnos con cada historia
       </h2>
+
+      <Cards/>
     </main>
   )
 }

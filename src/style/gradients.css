@@ -5,9 +5,38 @@
   -webkit-text-fill-color: transparent;
 }
 
-.diamond{
-    background: linear-gradient(to bottom right, #00FFF0 0%, rgba(0, 163, 255, 0.80) 27%, rgba(0, 41, 255, 0.00) 50%) bottom right / 50% 50% no-repeat,
-        linear-gradient(to bottom left, #00FFF0 0%, rgba(0, 163, 255, 0.80) 27%, rgba(0, 41, 255, 0.00) 50%) bottom left / 50% 50% no-repeat,
-        linear-gradient(to top left, #00FFF0 0%, rgba(0, 163, 255, 0.80) 27%, rgba(0, 41, 255, 0.00) 50%) top left / 50% 50% no-repeat,
-        linear-gradient(to top right, #00FFF0 0%, rgba(0, 163, 255, 0.80) 27%, rgba(0, 41, 255, 0.00) 50%) top right / 50% 50% no-repeat;;
+.diamond {
+  background:
+    linear-gradient(
+        to bottom right,
+        #00fff0 0%,
+        rgba(0, 163, 255, 0.8) 27%,
+        rgba(0, 41, 255, 0) 50%
+      )
+      bottom right / 50% 50% no-repeat,
+    linear-gradient(
+        to bottom left,
+        #00fff0 0%,
+        rgba(0, 163, 255, 0.8) 27%,
+        rgba(0, 41, 255, 0) 50%
+      )
+      bottom left / 50% 50% no-repeat,
+    linear-gradient(
+        to top left,
+        #00fff0 0%,
+        rgba(0, 163, 255, 0.8) 27%,
+        rgba(0, 41, 255, 0) 50%
+      )
+      top left / 50% 50% no-repeat,
+    linear-gradient(
+        to top right,
+        #00fff0 0%,
+        rgba(0, 163, 255, 0.8) 27%,
+        rgba(0, 41, 255, 0) 50%
+      )
+      top right / 50% 50% no-repeat;
+}
+
+.greadient-Card {
+  background: rgba(17, 18, 19, 0.596);
 }
