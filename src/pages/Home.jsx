@@ -4,10 +4,14 @@ import { blogData } from '../data'
 import '../style/gradients.css'
 import { Cards } from '../components/Cards'
 import { Search } from '../components/Search'
+// import { ContainerCards } from '../components/ContainerCards'
+import { useBlog } from '../hooks/useBlog'
 
 function Home() {
+  const { state } = useBlog()
+  const { searchBlogs } = state
   return (
-    <main className="bg-slate-100 px-5 pb-8 grid pt-5">
+    <main className="grid bg-slate-100 px-5 pb-8 pt-5">
       {blogData
         .map((blog) => {
           return (
@@ -69,8 +73,7 @@ function Home() {
         emocionarnos con cada historia
       </h2>
       <Search />
-
-      <Cards />
+      <Cards searchBlogs={searchBlogs} />
     </main>
   )
 }

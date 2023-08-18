@@ -2,15 +2,11 @@ import React from 'react'
 // import { blogData } from '../data'
 import { NavLink } from 'react-router-dom'
 import '../style/gradients.css'
-import { useBlog } from '../hooks/useBlog'
 
-function Cards() {
-  const { state } = useBlog()
-  const { cardBlogs } = state
-
+function Cards({ searchBlogs }) {
   return (
     <section className="grid justify-center gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {cardBlogs.map((blog) => {
+      {searchBlogs.map((blog) => {
         return (
           <section
             className="group relative grid h-[274px] w-[335px] justify-items-center justify-self-center overflow-hidden rounded-2xl lg:h-[317px] lg:w-[416px]"
