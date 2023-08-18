@@ -1,14 +1,7 @@
 import React from 'react'
 import { BiSearchAlt } from 'react-icons/bi'
-import { useBlog } from '../hooks/useBlog'
 
-function Search() {
-  const { state, stateUpdaters } = useBlog()
-  const { searchValue } = state
-  const { setSearchValue } = stateUpdaters
-
-  console.log(searchValue)
-//aqui es input
+function Search({ searchValue, setSearchValue }) {
   return (
     <>
       <label className="label my-6 flex h-12 w-80 cursor-pointer items-center overflow-hidden rounded-full  border-2 border-gray-950 pl-4 pr-2 focus-within:border-sky-500">
@@ -17,7 +10,9 @@ function Search() {
           type="text"
           value={searchValue}
           placeholder="Que idea te llama la atencion"
-          onChange={(event) => setSearchValue(event.target.value)}
+          onChange={(event) =>
+            setSearchValue(event.target.value.toLocaleLowerCase())
+          }
         />
         <BiSearchAlt className=" h-7 w-7" />
       </label>
