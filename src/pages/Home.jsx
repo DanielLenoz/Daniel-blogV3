@@ -8,8 +8,8 @@ import { useBlog } from '../hooks/useBlog'
 
 function Home() {
   const { state, stateUpdaters } = useBlog()
-  const { blogData2, datoFiltrados, searchValue } = state
-  const { setDatoFiltrados, setSearchValue } = stateUpdaters
+  const { blogData2, filterData, searchValue } = state
+  const { setfilterData, setSearchValue } = stateUpdaters
 
   useEffect(() => {
     const nuevosDatosFiltrados = blogData2.filter(
@@ -17,7 +17,7 @@ function Home() {
         data.title.toLowerCase().includes(searchValue) ||
         data.description.toLowerCase().includes(searchValue),
     )
-    setDatoFiltrados(nuevosDatosFiltrados)
+    setfilterData(nuevosDatosFiltrados)
   }, [searchValue])
 
   return (
@@ -83,7 +83,7 @@ function Home() {
         emocionarnos con cada historia
       </h2>
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <Cards blogData2={blogData2} datoFiltrados={datoFiltrados} />
+      <Cards blogData2={blogData2} filterData={filterData} />
     </main>
   )
 }

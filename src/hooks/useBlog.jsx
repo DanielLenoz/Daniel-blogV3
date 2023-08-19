@@ -8,18 +8,18 @@ function useBlog() {
   const [menuActive, setMenuActive] = useState(false)
 
   const [searchValue, setSearchValue] = useState('')
-  const [datoFiltrados, setDatoFiltrados] = useState([])
+  const [filterData, setfilterData] = useState([])
 
   const state = {
     blogData2,
     menuActive,
     searchValue,
-    datoFiltrados,
+    filterData,
   }
   const stateUpdaters = {
     setMenuActive,
     setSearchValue,
-    setDatoFiltrados,
+    setfilterData,
   }
 
   return { state, stateUpdaters }

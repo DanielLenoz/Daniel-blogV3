@@ -2,12 +2,16 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../style/gradients.css'
 
-function Cards({ blogData2, datoFiltrados }) {
-  const lista = datoFiltrados.length > 0 ? datoFiltrados : blogData2
+function Cards({ blogData2, filterData, blogsArea }) {
+  if (blogsArea) {
+    return filterArea(blogsArea)
+  }
+
+  const lista = filterData.length > 0 ? filterData : blogData2
 
   return (
     <section className="grid justify-center gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {!datoFiltrados.length && blogData2.length ? (
+      {!filterData.length && blogData2.length ? (
         <p>no encontrado</p>
       ) : (
         <>
@@ -63,6 +67,12 @@ function Cards({ blogData2, datoFiltrados }) {
       )}
     </section>
   )
+}
+
+function filterArea(blogsArea) {
+  return (blogData2 = blogData2.filter((hashtag) =>
+    hashtag.hashtag.includes(blogsArea),
+  ))
 }
 
 export { Cards }
