@@ -89,19 +89,19 @@ const routes = [
     text: 'Home',
   },
   {
-    to: '/blogs',
+    to: '/Blogs',
     text: 'Blogs',
   },
   {
-    to: '/events',
+    to: '/Events',
     text: 'Events',
   },
   {
-    to: '/projects',
+    to: '/Projects',
     text: 'Projects',
   },
   {
-    to: '/contact',
+    to: '/Contact',
     text: 'Contact',
   },
 ]

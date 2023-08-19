@@ -1,16 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Search } from '../components/Search'
 import { Cards } from '../components/Cards'
 import '../style/gradients.css'
+import { useBlog } from '../hooks/useBlog'
+import { blogData } from '../data'
 
 function Area() {
   const { id } = useParams()
 
+  const { state, stateUpdaters } = useBlog()
+  const { filterData, searchValue } = state
+  const { setfilterData, setSearchValue } = stateUpdaters
+
+  useEffect(() => {
+    const nuevosDatosFiltrados = blogData.filter(
+      (data) =>
+        data.title.toLowerCase().includes(searchValue) ||
+        data.description.toLowerCase().includes(searchValue),
+    )
+    setfilterData(nuevosDatosFiltrados)
+  }, [searchValue])
+
+  useEffect(() => {
+    const filterDataArea = blogData.filter((area) =>
+      area.hashtag.includes(`#${id}`),
+    )
+    setfilterData(filterDataArea)
+  }, [id])
+
   let post = postArea.filter((area) => area.id.includes(id))
 
-  console.log(id)
-  console.log(post)
   return (
     <>
       <section className=" bg-slate-100">
@@ -36,13 +56,13 @@ function Area() {
         })}
       </section>
 
-      {/* <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <section>
         <div className="diamond"></div>
-        <Cards blogData2={blogData2} filterData={filterData} />
+        <Cards blogData2={blogData} filterData={filterData} blogsArea={id} />
         <div className="diamond"></div>
-      </section> */}
+      </section>
     </>
   )
 }
@@ -51,7 +71,7 @@ export { Area }
 
 const postArea = [
   {
-    id: 'blogs',
+    id: 'Blogs',
     imgIphone:
       './src/assets/img/img-area/img-iphone/background-Blogs-iphone.jpg',
     imgDesktop:
@@ -59,7 +79,7 @@ const postArea = [
     text: 'para vivir muchas historias y reflexionar estando dentro del pensamiento y sabiduría de otra persona',
   },
   {
-    id: 'events',
+    id: 'Events',
     imgIphone:
       './src/assets/img/img-area/img-iphone/background-Events-iphone.jpg',
     imgDesktop:
@@ -67,7 +87,7 @@ const postArea = [
     text: 'las relaciones son lo mas importante, aprendemos de los demas y de nosotros mismos, volviéndonos mas sabios ',
   },
   {
-    id: 'projects',
+    id: 'Projects',
     imgIphone:
       './src/assets/img/img-area/img-iphone/background-Projects-iphone.jpg',
     imgDesktop:
