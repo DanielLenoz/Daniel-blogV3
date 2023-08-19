@@ -20,7 +20,7 @@ function Cards({ blogData2, filterData }) {
                 key={blog.title}
               >
                 <section className="relative">
-                  <figure className="relative z-10 h-full w-full">
+                  <figure className="relative h-full w-full">
                     <img
                       className="h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat"
                       src={blog.imgIphone}
