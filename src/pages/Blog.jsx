@@ -7,7 +7,7 @@ import { Cards } from '../components/Cards'
 
 function Blog() {
   const { state, stateUpdaters } = useBlog()
-  const { filterData } = state
+  const { filterData, newblogDataLast } = state
   const { setfilterData } = stateUpdaters
   const { id } = useParams()
 
@@ -16,15 +16,13 @@ function Blog() {
     setfilterData(filterDataArea)
   }, [id])
 
-  
-
   return (
-    <main className='px-5 bg-slate-100'>
+    <main className="bg-slate-100 px-5">
       {filterData.map((blog) => {
         return (
           <>
-            <section className="relative mb-5" key={blog.title}>
-              <figure className="z-10 mx-auto relative mt-4 md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]">
+            <section className="relative py-5" key={blog.title}>
+              <figure className="relative z-10 mx-auto md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]">
                 <picture>
                   <source media="(min-width:945px)" srcSet={blog.imgDesktop} />
                   <img
@@ -37,7 +35,7 @@ function Blog() {
               <div className="diamond absolute -bottom-40 -left-20 h-44 w-40 "></div>
               <div className="diamond absolute -bottom-20 -right-20 h-44 w-40"></div>
             </section>
-            <section className="z-10 relative">
+            <section className="relative z-10">
               <h1 className=" font-oswald text-xl font-bold">{blog.title}</h1>
               <article className="mb-3 mt-1 flex justify-between">
                 <p
@@ -63,11 +61,13 @@ function Blog() {
         )
       })}
 
-      <section className="relative mb-10 mt-4">
-        <p className='text-center font-oswald text-xl font-bold mb-6'>Ultimos Blogs</p>
+      <section className="relative mt-4 pb-10">
+        <p className="mb-6 text-center font-oswald text-xl font-bold">
+          Ultimos Blogs
+        </p>
         <div className="diamond absolute -left-20 -top-7 h-44 w-40"></div>
         <div className="diamond absolute -right-20 -top-7 h-44 w-40"></div>
-        <Cards blogData2={blogData} filterData={filterData} />
+        <Cards blogData2={blogData} filterData={newblogDataLast} />
       </section>
     </main>
   )

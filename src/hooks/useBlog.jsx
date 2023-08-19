@@ -3,7 +3,9 @@ import { blogData } from '../data'
 
 function useBlog() {
   const blogData2 = [...blogData]
+  const blogDataLast = [...blogData]
   const newblogData2 = blogData2.shift()
+  const newblogDataLast = blogDataLast.slice(0, 3)
 
   const [menuActive, setMenuActive] = useState(false)
 
@@ -15,6 +17,7 @@ function useBlog() {
     menuActive,
     searchValue,
     filterData,
+    newblogDataLast,
   }
   const stateUpdaters = {
     setMenuActive,

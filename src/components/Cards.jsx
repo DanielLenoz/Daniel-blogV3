@@ -3,9 +3,7 @@ import { NavLink } from 'react-router-dom'
 import '../style/gradients.css'
 
 function Cards({ blogData2, filterData }) {
-
   const lista = filterData.length > 0 ? filterData : blogData2
-
 
   return (
     <section className="grid justify-center gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -50,6 +48,7 @@ function Cards({ blogData2, filterData }) {
                     <NavLink
                       className="gradient-leer font-roboto text-base font-bold lg:text-lg"
                       to={`/blog/${blog.title}`}
+                      onClick={window.scrollTo(0, 0)}
                     >
                       Leer mas
                     </NavLink>
