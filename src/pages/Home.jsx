@@ -12,8 +12,10 @@ function Home() {
   const { setDatoFiltrados, setSearchValue } = stateUpdaters
 
   useEffect(() => {
-    const nuevosDatosFiltrados = blogData2.filter((data) =>
-      data.title.toLowerCase().includes(searchValue),
+    const nuevosDatosFiltrados = blogData2.filter(
+      (data) =>
+        data.title.toLowerCase().includes(searchValue) ||
+        data.description.toLowerCase().includes(searchValue),
     )
     setDatoFiltrados(nuevosDatosFiltrados)
   }, [searchValue])
