@@ -59,7 +59,7 @@ function Area() {
       <section className="relative mb-16">
         <div className="diamond absolute -left-20 -top-20 h-44 w-40"></div>
         <div className="diamond absolute -right-20 -top-20 h-44 w-40"></div>
-        <Cards blogData2={blogData} filterData={filterData} blogsArea={id} />
+        <Cards blogData2={blogData} filterData={filterData}/>
       </section>
     </section>
   )
