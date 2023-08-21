@@ -1,5 +1,16 @@
-.gradient-leer {
+.gradient-leer, .gradient-hablemos-rojo {
   background: linear-gradient(to bottom, #f5af19, #f12711);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-hablemos-azul {
+  background: linear-gradient(
+    0deg,
+    #0029ff 0%,
+    #00a3ff 62.18%,
+    rgba(0, 255, 240, 0.71) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -39,4 +50,7 @@
 
 .greadient-Card {
   background: rgba(17, 18, 19, 0.596);
+}
+.gradient-contact {
+  background: rgba(45, 51, 73, 0.49);
 }
