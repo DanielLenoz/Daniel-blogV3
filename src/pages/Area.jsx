@@ -33,7 +33,7 @@ function Area() {
   let post = postArea.filter((area) => area.id.includes(id))
 
   return (
-    <section className="mx-5 bg-slate-100">
+    <section className="px-5 bg-slate-100">
       {post.map((post) => {
         return (
           <figure
@@ -57,7 +57,7 @@ function Area() {
 
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
-      <section className="relative mb-16">
+      <section className="relative pb-16">
         <div className="diamond scal absolute -left-20 -top-20 h-44 w-40"></div>
         <div className="diamond scal absolute -right-20 -top-20 h-44 w-40"></div>
         <Cards blogData2={blogData} filterData={filterData} />
