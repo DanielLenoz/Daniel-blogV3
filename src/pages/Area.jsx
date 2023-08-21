@@ -38,7 +38,7 @@ function Area() {
         return (
           <figure
             key={post.id}
-            className="mx-auto mt-4 grid h-[239px] w-[335px] items-center justify-center justify-items-center md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]"
+            className="mx-auto pt-4 grid h-[239px] w-[335px] items-center justify-center justify-items-center md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]"
           >
             <picture>
               <source media="(min-width:945px)" srcSet={post.imgDesktop} />
