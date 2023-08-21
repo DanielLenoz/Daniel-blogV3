@@ -25,14 +25,14 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #3d3d3d;
+  background: #88888a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #f5af19, #f12711);
+  background: #bababd;
   border-radius: 3rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #bd4103;
+  background: #2f2f31;
 }

@@ -26,17 +26,20 @@ function Home() {
       {blogData
         .map((blog) => {
           return (
-            <section className="grid justify-items-center" key={blog.title}>
+            <section
+              className="grid justify-center justify-items-center lg:flex lg:gap-8 "
+              key={blog.title}
+            >
               <section className="relative">
                 <div className="diamond scal absolute -right-20 -top-24 h-48 w-44"></div>
                 <figure className="relative z-10">
                   <picture>
                     <source
-                      media="(min-width:945px)"
+                      media="(min-width:1440px)"
                       srcSet={blog.imgDesktop}
                     />
                     <img
-                      className="rounded-2xl bg-cover bg-center bg-no-repeat"
+                      className="rounded-2xl bg-cover bg-center bg-no-repeat xl:h-[330px] xl:w-[700px]"
                       src={blog.imgIphone}
                       alt={blog.altDescription}
                     />
@@ -44,8 +47,8 @@ function Home() {
                 </figure>
                 <div className="diamond scal absolute -bottom-24 -left-24 h-48 w-44"></div>
               </section>
-              <section className="z-10 grid">
-                <h1 className=" text-center font-oswald text-xl font-bold">
+              <section className="z-10 grid lg:w-5/12">
+                <h1 className=" text-center font-oswald text-xl font-bold lg:text-start lg:text-3xl">
                   {blog.title}
                 </h1>
                 <p
@@ -55,21 +58,21 @@ function Home() {
                       : blog.hashtag === '#Events'
                       ? 'text-lime-400'
                       : 'text-teal-600'
-                  } font-oscald text-base font-bold`}
+                  } font-oscald text-base font-bold lg:text-lg`}
                 >
                   {blog.hashtag}
                 </p>
-                <p className="font-robot text-base font-normal leading-6 text-zinc-950">
+                <p className="font-robot text-base font-normal leading-6 text-zinc-950 lg:text-lg">
                   {blog.description}
                 </p>
-                <article className="mt-2 flex justify-between">
+                <article className="mt-2 flex justify-between lg:items-center">
                   <NavLink
-                    className="gradient-leer font-roboto text-base font-bold"
+                    className="gradient-leer font-roboto text-base font-bold lg:text-lg"
                     to={`/blog/${blog.title}`}
                   >
                     Leer mas
                   </NavLink>
-                  <p className="font-roboto text-base font-normal">
+                  <p className="font-roboto text-base font-normal lg:text-lg">
                     {blog.date}
                   </p>
                 </article>
@@ -79,7 +82,7 @@ function Home() {
         })
         .slice(0, 1)}
 
-      <h2 className=" mt-10 text-center font-oswald text-xl font-bold">
+      <h2 className=" mt-10 text-center font-oswald text-xl font-bold lg:mx-32 lg:text-3xl">
         solo la lectura hace creser el alma para comprender sabiduría y
         emocionarnos con cada historia
       </h2>

@@ -33,11 +33,13 @@ function Blog() {
                   />
                 </picture>
               </figure>
-              <div className="diamond scal absolute -bottom-40 -left-20 h-44 w-40 "></div>
-              <div className="diamond scal absolute -bottom-20 -right-20 h-44 w-40"></div>
+              <div className="diamond scal absolute -bottom-40 -left-20 h-44 w-40 lg:-left-2"></div>
+              <div className="diamond scal absolute -bottom-20 -right-20 h-44 w-40 lg:-right-8"></div>
             </section>
-            <section className="relative z-10">
-              <h1 className=" font-oswald text-xl font-bold">{blog.title}</h1>
+            <section className="relative z-10 lg:px-28">
+              <h1 className=" font-oswald text-xl font-bold lg:text-3xl">
+                {blog.title}
+              </h1>
               <article className="mb-3 mt-1 flex justify-between">
                 <p
                   className={`${
@@ -46,15 +48,17 @@ function Blog() {
                       : blog.hashtag === '#Events'
                       ? 'text-lime-400'
                       : 'text-teal-600'
-                  } font-oscald text-base font-bold`}
+                  } font-oscald text-base font-bold lg:text-lg`}
                 >
                   {blog.hashtag}
                 </p>
-                <p className="font-roboto text-base font-normal">{blog.date}</p>
+                <p className="font-roboto text-base font-normal lg:text-lg">
+                  {blog.date}
+                </p>
               </article>
 
               <p
-                className="font-robot text-base font-normal leading-6 text-zinc-950"
+                className="font-robot text-base font-normal leading-6 text-zinc-950 lg:text-lg"
                 dangerouslySetInnerHTML={{ __html: blog.text }}
               ></p>
             </section>
@@ -62,12 +66,12 @@ function Blog() {
         )
       })}
 
-      <section className="relative mt-4 pb-10">
-        <p className="mb-6 text-center font-oswald text-xl font-bold">
+      <section className="relative mt-4 pb-10 md:mt-10">
+        <p className="mb-6 text-center font-oswald text-xl font-bold lg:text-3xl">
           Ultimos Blogs
         </p>
-        <div className="diamond scal absolute -left-20 -top-7 h-44 w-40"></div>
-        <div className="diamond scal absolute -right-20 -top-7 h-44 w-40"></div>
+        <div className="diamond scal absolute -left-20 -top-7 h-44 w-40 lg:-left-12"></div>
+        <div className="diamond scal absolute -right-20 -top-7 h-44 w-40 lg:-right-12"></div>
         <Cards blogData2={blogData} filterData={newblogDataLast} />
       </section>
     </main>

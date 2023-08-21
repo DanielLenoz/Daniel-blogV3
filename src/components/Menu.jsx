@@ -34,21 +34,21 @@ function Menu() {
             />
           )}
         </section>
-      </nav>
 
-      <section className="sticky z-10 hidden h-screen justify-center bg-slate-100 lg:grid">
-        <ul className="my-32 grid gap-1 text-2xl">
-          {routes.map((routes) => {
-            return (
-              <MuneList
-                key={routes.to}
-                routes={routes}
-                activeStyle={activeStyle}
-              />
-            )
-          })}
-        </ul>
-      </section>
+        <section className="z-10 hidden bg-slate-100 lg:grid">
+          <ul className="flex gap-7 font-carter text-2xl">
+            {routes.map((routes) => {
+              return (
+                <MuneList
+                  key={routes.to}
+                  routes={routes}
+                  activeStyle={activeStyle}
+                />
+              )
+            })}
+          </ul>
+        </section>
+      </nav>
 
       {!!menuActive && (
         <section className="relative z-10 grid h-screen justify-center bg-slate-100">
