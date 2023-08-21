@@ -4,9 +4,9 @@ import { BiSearchAlt } from 'react-icons/bi'
 function Search({ searchValue, setSearchValue }) {
   return (
     <>
-      <label className="label mx-auto my-6 flex h-12 w-80 cursor-pointer items-center overflow-hidden rounded-full border-2 border-gray-950 pl-4 pr-2 focus-within:border-sky-500 lg:h-14 lg:w-[684px] ">
+      <label className="label mx-auto my-6 flex h-12 w-80 cursor-pointer items-center overflow-hidden rounded-full border-2 border-gray-950 pl-4 pr-2 focus-within:border-sky-500 dark:border-neutral-600 dark:focus-within:border-orange-600 lg:h-14 lg:w-[684px]">
         <input
-          className="input rounded-ful h-12 w-80 rounded-full bg-slate-100 font-roboto text-base font-normal outline-transparent lg:h-14 lg:w-[684px] lg:text-lg"
+          className="input rounded-ful h-12 w-80 rounded-full bg-slate-100 font-roboto text-base font-normal focus-visible:border-none focus-visible:outline-none dark:bg-slate-900 dark:text-slate-100 lg:h-14 lg:w-[684px] lg:text-lg"
           type="text"
           value={searchValue}
           placeholder="Que idea te llama la atencion"
@@ -14,7 +14,7 @@ function Search({ searchValue, setSearchValue }) {
             setSearchValue(event.target.value.toLocaleLowerCase())
           }
         />
-        <BiSearchAlt className=" h-7 w-7" />
+        <BiSearchAlt className=" h-7 w-7 dark:fill-slate-100" />
       </label>
     </>
   )

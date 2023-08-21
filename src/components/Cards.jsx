@@ -8,7 +8,7 @@ function Cards({ blogData2, filterData }) {
   return (
     <section className="grid justify-center gap-4 md:grid-cols-2 xl:grid-cols-3">
       {!filterData.length && blogData2.length ? (
-        <p className="mx-auto">No encontramos tu Idea 😢</p>
+        <p className="mx-auto dark:text-slate-100">No encontramos tu idea 😢</p>
       ) : (
         <>
           {lista.map((blog) => {
@@ -46,7 +46,7 @@ function Cards({ blogData2, filterData }) {
                   </p>
                   <article className="mt-2 flex justify-between">
                     <NavLink
-                      className="gradient-leer font-roboto text-base font-bold lg:text-lg"
+                      className="gradient-leer gradient-leer-rojo font-roboto text-base font-bold lg:text-lg"
                       to={`/blog/${blog.title}`}
                       onClick={() => window.scrollTo(0, 0)}
                     >

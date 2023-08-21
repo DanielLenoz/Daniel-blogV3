@@ -33,12 +33,12 @@ function Area() {
   let post = postArea.filter((area) => area.id.includes(id))
 
   return (
-    <section className="px-5 bg-slate-100">
+    <main className="bg-slate-100 px-5 dark:bg-slate-900">
       {post.map((post) => {
         return (
           <figure
             key={post.id}
-            className="mx-auto pt-4 grid h-[239px] w-[335px] items-center justify-center justify-items-center md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]"
+            className="mx-auto grid h-[239px] w-[335px] items-center justify-center justify-items-center pt-4 md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]"
           >
             <picture>
               <source media="(min-width:945px)" srcSet={post.imgDesktop} />
@@ -58,11 +58,11 @@ function Area() {
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <section className="relative pb-16">
-        <div className="diamond scal absolute -left-20 -top-20 h-44 w-40"></div>
-        <div className="diamond scal absolute -right-20 -top-20 h-44 w-40"></div>
+        <div className="diamond sunlight scal absolute -left-20 -top-20 h-44 w-40"></div>
+        <div className="diamond sunlight scal absolute -right-20 -top-20 h-44 w-40"></div>
         <Cards blogData2={blogData} filterData={filterData} />
       </section>
-    </section>
+    </main>
   )
 }
 

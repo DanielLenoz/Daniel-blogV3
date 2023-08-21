@@ -12,17 +12,29 @@ function useBlog() {
   const [searchValue, setSearchValue] = useState('')
   const [filterData, setfilterData] = useState([])
 
+  const [themes, setTemes] = useState(false)
+
+  if (themes) {
+    document.documentElement.classList.add('dark')
+    document.documentElement.classList.remove('light')
+  } else {
+    document.documentElement.classList.add('light')
+    document.documentElement.classList.remove('dark')
+  }
+
   const state = {
     blogData2,
     menuActive,
     searchValue,
     filterData,
     newblogDataLast,
+    themes,
   }
   const stateUpdaters = {
     setMenuActive,
     setSearchValue,
     setfilterData,
+    setTemes,
   }
 
   return { state, stateUpdaters }

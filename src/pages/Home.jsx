@@ -22,16 +22,16 @@ function Home() {
   }, [searchValue])
 
   return (
-    <main className="grid bg-slate-100 px-5 pb-8 pt-5">
+    <main className="grid bg-slate-100 px-5 pb-8 pt-5 dark:bg-slate-900">
       {blogData
         .map((blog) => {
           return (
             <section
-              className="grid justify-center justify-items-center lg:flex lg:gap-8 "
+              className="grid justify-center justify-items-center dark:text-slate-100 lg:flex lg:gap-8 "
               key={blog.title}
             >
               <section className="relative">
-                <div className="diamond scal absolute -right-20 -top-24 h-48 w-44"></div>
+                <div className="diamond scal sunlight absolute -right-20 -top-24 h-48 w-44"></div>
                 <figure className="relative z-10">
                   <picture>
                     <source
@@ -45,7 +45,7 @@ function Home() {
                     />
                   </picture>
                 </figure>
-                <div className="diamond scal absolute -bottom-24 -left-24 h-48 w-44"></div>
+                <div className="diamond scal sunlight absolute -bottom-24 -left-24 h-48 w-44"></div>
               </section>
               <section className="z-10 grid lg:w-5/12">
                 <h1 className=" text-center font-oswald text-xl font-bold lg:text-start lg:text-3xl">
@@ -62,12 +62,12 @@ function Home() {
                 >
                   {blog.hashtag}
                 </p>
-                <p className="font-robot text-base font-normal leading-6 text-zinc-950 lg:text-lg">
+                <p className="font-robot text-base font-normal leading-6 lg:text-lg">
                   {blog.description}
                 </p>
                 <article className="mt-2 flex justify-between lg:items-center">
                   <NavLink
-                    className="gradient-leer font-roboto text-base font-bold lg:text-lg"
+                    className="gradient-leer-rojo gradient-leer font-roboto text-base font-bold lg:text-lg "
                     to={`/blog/${blog.title}`}
                   >
                     Leer mas
@@ -82,7 +82,7 @@ function Home() {
         })
         .slice(0, 1)}
 
-      <h2 className=" mt-10 text-center font-oswald text-xl font-bold lg:mx-32 lg:text-3xl">
+      <h2 className=" mt-10 text-center font-oswald text-xl font-bold dark:text-slate-100 lg:mx-32 lg:text-3xl">
         solo la lectura hace creser el alma para comprender sabiduría y
         emocionarnos con cada historia
       </h2>

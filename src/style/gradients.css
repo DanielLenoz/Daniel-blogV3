@@ -1,11 +1,11 @@
-.gradient-leer,
+.dark .gradient-leer-rojo,
 .gradient-hablemos-rojo {
   background: linear-gradient(to bottom, #f5af19, #f12711);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.gradient-hablemos-azul {
+.gradient-leer, .gradient-hablemos-azul {
   background: linear-gradient(
     0deg,
     #0029ff 0%,
@@ -47,6 +47,9 @@
         rgba(0, 41, 255, 0) 50%
       )
       top right / 50% 50% no-repeat;
+}
+.dark .sunlight {
+  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(255, 230, 0, 0.46) 0%, rgba(245, 70, 1, 0.28) 53.13%, rgba(255, 0, 0, 0.00) 100%);
 }
 
 .greadient-Card {

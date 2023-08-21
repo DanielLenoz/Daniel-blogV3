@@ -6,15 +6,15 @@ import { MuneList, routes } from './Menu'
 import { Link } from 'react-router-dom'
 
 function Footer() {
-  const activeStyle = 'border-b-4 border-sky-500 up'
+  const activeStyle = 'border-b-4 border-sky-500 up dark:border-orange-600'
 
   return (
     <footer className="relative z-20 grid justify-items-center bg-zinc-900 text-slate-100 lg:grid-cols-6 lg:grid-rows-1 lg:items-center lg:px-8">
-      <p className=" mx-12 mt-12 text-center font-roboto lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-2 lg:self-start lg:text-lg lg:mr-16 lg:ml-0">
+      <p className=" mx-12 mt-12 text-center font-roboto lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-2 lg:ml-0 lg:mr-16 lg:self-start lg:text-lg">
         La abundancia de la lectura hace a las personas ver un mundo que nadie
         puede ver
       </p>
-      <ul className="my-16 grid gap-7 font-roboto text-base lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:gap-3 lg:text-lg lg:my-8">
+      <ul className="my-16 grid gap-7 font-roboto text-base lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:my-8 lg:gap-3 lg:text-lg">
         {routes.map((routes) => {
           return (
             <MuneList

@@ -7,12 +7,12 @@ import '../style/animaction.css'
 
 function Contact() {
   return (
-    <section className="grid w-auto bg-slate-100">
-      <h1 className=" gradient-hablemos-azul mt-3 text-center font-carter text-4xl font-normal">
+    <main className="grid w-auto bg-slate-100 dark:bg-slate-900">
+      <h1 className=" gradient-hablemos-azul gradient-leer-rojo mt-3 text-center font-carter text-4xl font-normal">
         ¡Hablemos!
       </h1>
       <section className="relative my-11 grid justify-items-center gap-7">
-        <div className="diamond scal absolute -right-14 -top-20 h-44 w-40 md:right-36 lg:right-0 xl:right-48"></div>
+        <div className="diamond sunlight scal absolute -right-14 -top-20 h-44 w-40 md:right-36 lg:right-0 xl:right-48"></div>
         <article className="gradient-contact z-10 grid w-[343px] rounded-3xl text-center text-slate-100 lg:flex lg:w-[910px]">
           <div className="grid justify-center rounded-3xl bg-gradient-to-b from-sky-500 lg:relative lg:h-56 lg:w-[1100px] lg:pt-4">
             <ImLinkedin2 className=" h-20 w-20 fill-white lg:h-28 lg:w-28" />
@@ -29,7 +29,7 @@ function Contact() {
             </p>
           </section>
           <Link
-            className="gradient-contact my-5 flex h-14 w-72 items-center justify-center justify-self-center rounded-2xl lg:absolute lg:left-20 lg:top-32 xl:left-72"
+            className="gradient-contact my-5 flex h-14 w-72 items-center justify-center justify-self-center rounded-2xl transition hover:scale-125 lg:absolute lg:left-20 lg:top-32 xl:left-72 "
             to={
               'https://www.linkedin.com/in/daniel-steven-rodriguez-verano-417472241/'
             }
@@ -40,7 +40,7 @@ function Contact() {
             <MdOutlineDoubleArrow className="ml-2 h-8 w-8 " />
           </Link>
         </article>
-        <div className="diamond scal absolute -left-14 top-72 h-44 w-40 md:left-32 lg:-left-5 lg:top-36 xl:left-44"></div>
+        <div className="diamond sunlight scal absolute -left-14 top-72 h-44 w-40 md:left-32 lg:-left-5 lg:top-36 xl:left-44"></div>
         <article className="gradient-contact z-10 grid w-[343px] rounded-3xl text-center text-slate-100 lg:flex lg:w-[910px]">
           <div className="grid justify-center rounded-3xl bg-gradient-to-b from-black lg:relative lg:h-56 lg:w-[1210px] lg:pt-4">
             <ImGithub className="mt-3 h-20 w-20 fill-white lg:h-28 lg:w-28" />
@@ -58,7 +58,7 @@ function Contact() {
             </p>
           </section>
           <Link
-            className="gradient-contact my-5 flex h-14 w-72 items-center justify-center justify-self-center rounded-2xl lg:absolute lg:bottom-0 lg:left-20 xl:left-72"
+            className="gradient-contact my-5 flex h-14 w-72 items-center justify-center justify-self-center rounded-2xl transition hover:scale-125 lg:absolute lg:bottom-0 lg:left-20 xl:left-72"
             to={'https://github.com/DanielLenoz'}
           >
             <p className="font-oswald text-lg font-bold lg:text-2xl">
@@ -67,9 +67,9 @@ function Contact() {
             <MdOutlineDoubleArrow className="ml-2 h-8 w-8" />
           </Link>
         </article>
-        <div className="diamond scal absolute -bottom-16 -right-14 h-44 w-40 md:right-36 lg:right-0 xl:right-48"></div>
+        <div className="diamond sunlight scal absolute -bottom-16 -right-14 h-44 w-40 md:right-36 lg:right-0 xl:right-48"></div>
       </section>
-    </section>
+    </main>
   )
 }
 
