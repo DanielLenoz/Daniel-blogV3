@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { blogData } from '../data'
 import '../style/gradients.css'
+import '../style/animaction.css'
 import { Cards } from '../components/Cards'
 import { Search } from '../components/Search'
 import { useBlog } from '../hooks/useBlog'
@@ -27,7 +28,7 @@ function Home() {
           return (
             <section className="grid justify-items-center" key={blog.title}>
               <section className="relative">
-                <div className="diamond absolute -right-20 -top-24 h-48 w-44"></div>
+                <div className="diamond scal absolute -right-20 -top-24 h-48 w-44"></div>
                 <figure className="relative z-10">
                   <picture>
                     <source
@@ -41,7 +42,7 @@ function Home() {
                     />
                   </picture>
                 </figure>
-                <div className="diamond absolute -bottom-24 -left-24 h-48 w-44"></div>
+                <div className="diamond scal absolute -bottom-24 -left-24 h-48 w-44"></div>
               </section>
               <section className="z-10 grid">
                 <h1 className=" text-center font-oswald text-xl font-bold">

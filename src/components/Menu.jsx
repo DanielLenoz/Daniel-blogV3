@@ -3,6 +3,7 @@ import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri'
 import logoAzul from '../assets/icons/logo-azul.svg'
 import { NavLink } from 'react-router-dom'
 import '../style/animaction.css'
+import '../style/gradients.css'
 import { useBlog } from '../hooks/useBlog'
 
 function Menu() {
@@ -50,7 +51,8 @@ function Menu() {
       </section>
 
       {!!menuActive && (
-        <section className="sticky z-10 grid h-screen justify-center bg-slate-100">
+        <section className="relative z-10 grid h-screen justify-center bg-slate-100">
+          <div className="diamond scal scal absolute h-44 w-40"></div>
           <ul className="my-32 grid gap-1 font-carter text-2xl">
             {routes.map((routes) => {
               return (
@@ -58,11 +60,12 @@ function Menu() {
                   key={routes.to}
                   routes={routes}
                   activeStyle={activeStyle}
-                  onClick={() => toggle()}
+                  onClick={() => (toggle(), window.scrollTo(0, 0))}
                 />
               )
             })}
           </ul>
+          <div className="diamond scal scal absolute bottom-14 right-0 h-44 w-40"></div>
         </section>
       )}
     </header>
@@ -75,7 +78,7 @@ function MuneList({ routes, activeStyle, onClick }) {
       <NavLink
         className={({ isActive }) => (isActive ? activeStyle : undefined)}
         to={routes.to}
-        onClick={(onClick, () => window.scrollTo(0, 0))}
+        onClick={onClick}
       >
         {routes.text}
       </NavLink>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import '../style/gradients.css'
+import '../style/animaction.css'
 import { blogData } from '../data'
 import { useBlog } from '../hooks/useBlog'
 import { Cards } from '../components/Cards'
@@ -32,8 +33,8 @@ function Blog() {
                   />
                 </picture>
               </figure>
-              <div className="diamond absolute -bottom-40 -left-20 h-44 w-40 "></div>
-              <div className="diamond absolute -bottom-20 -right-20 h-44 w-40"></div>
+              <div className="diamond scal absolute -bottom-40 -left-20 h-44 w-40 "></div>
+              <div className="diamond scal absolute -bottom-20 -right-20 h-44 w-40"></div>
             </section>
             <section className="relative z-10">
               <h1 className=" font-oswald text-xl font-bold">{blog.title}</h1>
@@ -65,8 +66,8 @@ function Blog() {
         <p className="mb-6 text-center font-oswald text-xl font-bold">
           Ultimos Blogs
         </p>
-        <div className="diamond absolute -left-20 -top-7 h-44 w-40"></div>
-        <div className="diamond absolute -right-20 -top-7 h-44 w-40"></div>
+        <div className="diamond scal absolute -left-20 -top-7 h-44 w-40"></div>
+        <div className="diamond scal absolute -right-20 -top-7 h-44 w-40"></div>
         <Cards blogData2={blogData} filterData={newblogDataLast} />
       </section>
     </main>

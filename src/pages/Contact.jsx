@@ -3,6 +3,7 @@ import { ImGithub, ImLinkedin2 } from 'react-icons/im'
 import { MdOutlineDoubleArrow } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import '../style/gradients.css'
+import '../style/animaction.css'
 
 function Contact() {
   return (
@@ -11,7 +12,7 @@ function Contact() {
         ¡Hablemos!
       </h1>
       <section className="relative my-11 grid justify-items-center gap-7">
-        <div className="diamond absolute -right-14 -top-20 h-44 w-40"></div>
+        <div className="diamond scal absolute -right-14 -top-20 h-44 w-40"></div>
         <article className="gradient-contact z-10 grid w-[343px] rounded-3xl text-center text-slate-100">
           <div className="grid justify-center rounded-3xl bg-gradient-to-b from-sky-500">
             <ImLinkedin2 className=" h-20 w-20 fill-white" />
@@ -35,10 +36,10 @@ function Contact() {
             <MdOutlineDoubleArrow className="ml-2 h-8 w-8" />
           </Link>
         </article>
-        <div className="diamond absolute -left-14 top-72 h-44 w-40"></div>
+        <div className="diamond scal absolute -left-14 top-72 h-44 w-40"></div>
         <article className="gradient-contact z-10 grid w-[343px] rounded-3xl text-center text-slate-100">
           <div className="grid justify-center rounded-3xl bg-gradient-to-b from-black">
-            <ImGithub className="h-20 w-20 mt-3 fill-white" />
+            <ImGithub className="mt-3 h-20 w-20 fill-white" />
           </div>
           <h1 className="pt-2 font-oswald text-lg font-bold">
             Daniel Steven Rodríguez Verano
@@ -57,7 +58,7 @@ function Contact() {
             <MdOutlineDoubleArrow className="ml-2 h-8 w-8" />
           </Link>
         </article>
-        <div className="diamond absolute -bottom-16 -right-14 h-44 w-40"></div>
+        <div className="diamond scal absolute -bottom-16 -right-14 h-44 w-40"></div>
       </section>
     </section>
   )

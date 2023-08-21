@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Search } from '../components/Search'
 import { Cards } from '../components/Cards'
 import '../style/gradients.css'
+import '../style/animaction.css'
 import { useBlog } from '../hooks/useBlog'
 import { blogData } from '../data'
 
@@ -57,9 +58,9 @@ function Area() {
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <section className="relative mb-16">
-        <div className="diamond absolute -left-20 -top-20 h-44 w-40"></div>
-        <div className="diamond absolute -right-20 -top-20 h-44 w-40"></div>
-        <Cards blogData2={blogData} filterData={filterData}/>
+        <div className="diamond scal absolute -left-20 -top-20 h-44 w-40"></div>
+        <div className="diamond scal absolute -right-20 -top-20 h-44 w-40"></div>
+        <Cards blogData2={blogData} filterData={filterData} />
       </section>
     </section>
   )

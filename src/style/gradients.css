@@ -1,4 +1,5 @@
-.gradient-leer, .gradient-hablemos-rojo {
+.gradient-leer,
+.gradient-hablemos-rojo {
   background: linear-gradient(to bottom, #f5af19, #f12711);
   -webkit-background-clip: text;
   background-clip: text;

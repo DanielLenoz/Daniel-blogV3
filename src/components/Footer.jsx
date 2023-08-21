@@ -21,6 +21,7 @@ function Footer() {
               key={routes.to}
               routes={routes}
               activeStyle={activeStyle}
+              onClick={() => window.scrollTo(0, 0)}
             />
           )
         })}
