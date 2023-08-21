@@ -48,7 +48,7 @@ function Cards({ blogData2, filterData }) {
                     <NavLink
                       className="gradient-leer font-roboto text-base font-bold lg:text-lg"
                       to={`/blog/${blog.title}`}
-                      onClick={window.scrollTo(0, 0)}
+                      onClick={()=>window.scrollTo(0, 0)}
                     >
                       Leer mas
                     </NavLink>

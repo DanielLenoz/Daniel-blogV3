@@ -75,7 +75,7 @@ function MuneList({ routes, activeStyle, onClick }) {
       <NavLink
         className={({ isActive }) => (isActive ? activeStyle : undefined)}
         to={routes.to}
-        onClick={onClick}
+        onClick={(onClick, () => window.scrollTo(0, 0))}
       >
         {routes.text}
       </NavLink>
