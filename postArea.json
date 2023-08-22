@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Blogs",
+    "imgIphone": "./assets/img/img-area/img-iphone/background-Blogs-iphone.jpg",
+    "imgDesktop": "./assets/img/img-area/img-desktop/background-Blogs-desktop.jpg",
+    "text": "para vivir muchas historias y reflexionar estando dentro del pensamiento y sabiduría de otra persona"
+  },
+  {
+    "id": "Events",
+    "imgIphone": "./assets/img/img-area/img-iphone/background-Events-iphone.jpg",
+    "imgDesktop": "./assets/img/img-area/img-desktop/background-Events-desktop.jpg",
+    "text": "las relaciones son lo mas importante, aprendemos de los demas y de nosotros mismos, volviéndonos mas sabios "
+  },
+  {
+    "id": "Projects",
+    "imgIphone": "./assets/img/img-area/img-iphone/background-Projects-iphone.jpg",
+    "imgDesktop": "./assets/img/img-area/img-desktop/background-Projects-desktop.jpg",
+    "text": "la tecnologia es como una espada, si la saves utilizar con sabiduría y entendimiento será tu mejor aliada, sino seras presa de ella "
+  }
+]
