@@ -1,9 +1,9 @@
 import React from 'react'
 import { ImLinkedin2, ImGithub } from 'react-icons/im'
-import logoDoble from '../assets/icons/logo-doble.svg'
-import '../style/animaction.css'
-import { MuneList, routes } from './Menu'
 import { Link } from 'react-router-dom'
+import { MuneList, routes } from './Menu'
+import logoDoble from '../../public/assets/icons/logo-doble.svg'
+import '../style/animaction.css'
 
 function Footer() {
   const activeStyle = 'border-b-4 border-sky-500 up dark:border-orange-600'

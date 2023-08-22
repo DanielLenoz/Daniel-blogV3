@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { useBlog } from '../hooks/useBlog'
 import { Search } from '../components/Search'
 import { Cards } from '../components/Cards'
 import '../style/gradients.css'
 import '../style/animaction.css'
-import { useBlog } from '../hooks/useBlog'
-import { blogData } from '../data'
 
 function Area() {
   const { id } = useParams()
 
-  const { state, stateUpdaters } = useBlog()
-  const { filterData, searchValue } = state
-  const { setfilterData, setSearchValue } = stateUpdaters
+  const {
+    setfilterData,
+    setSearchValue,
+    filterData,
+    searchValue,
+    postArea,
+    blogData,
+  } = useBlog()
 
   useEffect(() => {
     const nuevosDatosFiltrados = filterData.filter(
@@ -30,8 +34,11 @@ function Area() {
     setfilterData(filterDataArea)
   }, [id, searchValue.length === 0])
 
+  console.log(postArea);
   let post = postArea.filter((area) => area.id.includes(id))
 
+
+  console.log(filterData);
   return (
     <main className="bg-slate-100 px-5 dark:bg-slate-900">
       {post.map((post) => {
@@ -67,30 +74,3 @@ function Area() {
 }
 
 export { Area }
-
-const postArea = [
-  {
-    id: 'Blogs',
-    imgIphone:
-      './src/assets/img/img-area/img-iphone/background-Blogs-iphone.jpg',
-    imgDesktop:
-      './src/assets/img/img-area/img-desktop/background-Blogs-desktop.jpg',
-    text: 'para vivir muchas historias y reflexionar estando dentro del pensamiento y sabiduría de otra persona',
-  },
-  {
-    id: 'Events',
-    imgIphone:
-      './src/assets/img/img-area/img-iphone/background-Events-iphone.jpg',
-    imgDesktop:
-      './src/assets/img/img-area/img-desktop/background-Events-desktop.jpg',
-    text: 'las relaciones son lo mas importante, aprendemos de los demas y de nosotros mismos, volviéndonos mas sabios ',
-  },
-  {
-    id: 'Projects',
-    imgIphone:
-      './src/assets/img/img-area/img-iphone/background-Projects-iphone.jpg',
-    imgDesktop:
-      './src/assets/img/img-area/img-desktop/background-Projects-desktop.jpg',
-    text: 'la tecnologia es como una espada, si la saves utilizar con sabiduría y entendimiento será tu mejor aliada, sino seras presa de ella ',
-  },
-]

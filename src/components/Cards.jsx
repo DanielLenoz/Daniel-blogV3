@@ -22,7 +22,7 @@ function Cards({ blogData2, filterData }) {
                     <img
                       className="h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat"
                       src={blog.imgIphone}
-                      alt={blog.altDescription}
+                      alt={blog.title}
                     />
                   </figure>
                 </section>

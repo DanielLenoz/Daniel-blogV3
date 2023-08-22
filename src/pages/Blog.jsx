@@ -1,16 +1,13 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import '../style/gradients.css'
-import '../style/animaction.css'
-import { blogData } from '../data'
 import { useBlog } from '../hooks/useBlog'
 import { Cards } from '../components/Cards'
+import '../style/gradients.css'
+import '../style/animaction.css'
 
 function Blog() {
-  const { state, stateUpdaters } = useBlog()
-  const { filterData, newblogDataLast } = state
-  const { setfilterData } = stateUpdaters
   const { id } = useParams()
+  const { setfilterData, filterData, newblogDataLast, blogData } = useBlog()
 
   useEffect(() => {
     const filterDataArea = blogData.filter((area) => area.title.includes(id))
@@ -29,7 +26,7 @@ function Blog() {
                   <img
                     className="rounded-2xl bg-cover bg-center bg-no-repeat md:h-[280px] md:w-[590px] lg:h-[293px] lg:w-[890px] xl:h-[367px] xl:w-[1252px]"
                     src={blog.imgIphone}
-                    alt={blog.altDescription}
+                    alt={blog.title}
                   />
                 </picture>
               </figure>

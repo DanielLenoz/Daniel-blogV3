@@ -1,25 +1,17 @@
 import React from 'react'
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri'
-import logoAzul from '../assets/icons/logo-azul.svg'
-import logorojo from '../assets/icons/logo-rojo.svg'
 import { NavLink } from 'react-router-dom'
+import { useBlog } from '../hooks/useBlog'
+import logoAzul from '../../public/assets/icons/logo-azul.svg'
+import logorojo from '../../public/assets/icons/logo-rojo.svg'
 import '../style/animaction.css'
 import '../style/gradients.css'
-import { useBlog } from '../hooks/useBlog'
 
 function Menu() {
   const activeStyle = 'border-b-4 border-sky-500 up dark:border-orange-600'
 
-  const { state, stateUpdaters } = useBlog()
-  const { setMenuActive, setTemes } = stateUpdaters
-  const { menuActive, themes } = state
+  const { menuActive, themes, toggleMenu, toggleTheme } = useBlog()
 
-  const toggle = () => {
-    setMenuActive(!menuActive)
-  }
-  const toggleTheme = () => {
-    setTemes(!themes)
-  }
   return (
     <header>
       <nav className="relative z-10 flex items-center justify-between bg-slate-100 px-5 dark:bg-slate-900 ">
@@ -32,17 +24,17 @@ function Menu() {
           {!menuActive ? (
             <RiMenu3Fill
               className="absolute -bottom-4 right-0 h-8 w-8 dark:fill-slate-100 "
-              onClick={toggle}
+              onClick={toggleMenu}
             />
           ) : (
             <RiCloseFill
               className="absolute -bottom-4 right-0 h-8 w-8 dark:fill-slate-100 "
-              onClick={toggle}
+              onClick={toggleMenu}
             />
           )}
         </section>
 
-        <section className="z-10 hidden bg-slate-100 lg:grid dark:bg-slate-900">
+        <section className="z-10 hidden bg-slate-100 dark:bg-slate-900 lg:grid">
           <ul className="flex gap-7 font-carter text-2xl">
             {routes.map((routes) => {
               return (
@@ -67,7 +59,7 @@ function Menu() {
                   key={routes.to}
                   routes={routes}
                   activeStyle={activeStyle}
-                  onClick={() => (toggle(), window.scrollTo(0, 0))}
+                  onClick={() => (toggleMenu(), window.scrollTo(0, 0))}
                 />
               )
             })}

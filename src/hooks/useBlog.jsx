@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
-import { blogData } from '../data'
+import React, { createContext, useContext, useState } from 'react'
+import blogData from '../../public/data.json'
+import postArea from '../../public/postArea.json'
 
-function useBlog() {
+const BlogContext = createContext()
+
+function BlogPrivider({ children }) {
   const blogData2 = [...blogData]
   const blogDataLast = [...blogData]
   const newblogData2 = blogData2.shift()
@@ -14,6 +17,13 @@ function useBlog() {
 
   const [themes, setTemes] = useState(false)
 
+  const toggleMenu = () => {
+    setMenuActive(!menuActive)
+  }
+  const toggleTheme = () => {
+    setTemes(!themes)
+  }
+
   if (themes) {
     document.documentElement.classList.add('dark')
     document.documentElement.classList.remove('light')
@@ -22,22 +32,32 @@ function useBlog() {
     document.documentElement.classList.remove('dark')
   }
 
-  const state = {
-    blogData2,
-    menuActive,
-    searchValue,
-    filterData,
-    newblogDataLast,
-    themes,
-  }
-  const stateUpdaters = {
-    setMenuActive,
-    setSearchValue,
-    setfilterData,
-    setTemes,
-  }
-
-  return { state, stateUpdaters }
+  return (
+    <BlogContext.Provider
+      value={{
+        blogData2,
+        menuActive,
+        searchValue,
+        filterData,
+        newblogDataLast,
+        themes,
+        setMenuActive,
+        setSearchValue,
+        setfilterData,
+        setTemes,
+        toggleMenu,
+        toggleTheme,
+        postArea,
+        blogData,
+      }}
+    >
+      {children}
+    </BlogContext.Provider>
+  )
 }
 
-export { useBlog }
+function useBlog() {
+  return useContext(BlogContext)
+}
+
+export { useBlog, BlogPrivider }

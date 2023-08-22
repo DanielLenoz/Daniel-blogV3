@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
-import { blogData } from '../data'
-import '../style/gradients.css'
-import '../style/animaction.css'
+import { useBlog } from '../hooks/useBlog'
 import { Cards } from '../components/Cards'
 import { Search } from '../components/Search'
-import { useBlog } from '../hooks/useBlog'
+import '../style/gradients.css'
+import '../style/animaction.css'
 
 function Home() {
-  const { state, stateUpdaters } = useBlog()
-  const { blogData2, filterData, searchValue } = state
-  const { setfilterData, setSearchValue } = stateUpdaters
+  const {
+    setfilterData,
+    setSearchValue,
+    blogData2,
+    filterData,
+    searchValue,
+    blogData,
+  } = useBlog()
 
   useEffect(() => {
     const nuevosDatosFiltrados = blogData2.filter(
@@ -41,7 +45,7 @@ function Home() {
                     <img
                       className="rounded-2xl bg-cover bg-center bg-no-repeat xl:h-[330px] xl:w-[700px]"
                       src={blog.imgIphone}
-                      alt={blog.altDescription}
+                      alt={blog.title}
                     />
                   </picture>
                 </figure>
