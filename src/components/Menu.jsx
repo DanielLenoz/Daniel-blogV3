@@ -74,11 +74,15 @@ function Menu() {
 function MuneList({ routes, activeStyle, onClick }) {
   return (
     <li
-      className="text-center font-normal dark:text-slate-100"
+      className="text-center font-normal dark:text-slate-100 "
       key={routes.text}
     >
       <NavLink
-        className={({ isActive }) => (isActive ? activeStyle : undefined)}
+        className={({ isActive }) =>
+          isActive
+            ? activeStyle
+            : 'up border-b-4 border-sky-500 border-transparent transition ease-in-out hover:border-b-4 hover:border-sky-500 dark:hover:border-b-4 dark:hover:border-orange-600'
+        }
         to={routes.to}
         onClick={onClick}
       >
