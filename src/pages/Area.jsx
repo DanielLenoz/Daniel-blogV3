@@ -34,11 +34,8 @@ function Area() {
     setfilterData(filterDataArea)
   }, [id, searchValue.length === 0])
 
-  console.log(postArea);
   let post = postArea.filter((area) => area.id.includes(id))
 
-
-  console.log(filterData);
   return (
     <main className="bg-slate-100 px-5 dark:bg-slate-900">
       {post.map((post) => {
