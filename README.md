@@ -45,7 +45,7 @@ Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, sigue estos p
 ## Autor
 
 - Daniel Steven Rodriguez Verano
-- Sitio web: [El BlogV3](https://github.com/DanielLenoz/DanielLenoz-blogV3)
+- Sitio web: [El BlogV3](https://daniellenoz.github.io/DanielLenoz-blogV3/)
 - Contacto sugerido: [Linkedin](https://www.linkedin.com/in/daniel-steven-rodriguez-verano-417472241/)
 
 ## Licencia
