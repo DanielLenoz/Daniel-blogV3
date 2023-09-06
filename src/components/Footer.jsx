@@ -35,10 +35,16 @@ function Footer() {
             to={
               'https://www.linkedin.com/in/daniel-steven-rodriguez-verano-417472241/'
             }
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <ImLinkedin2 className="jek h-12 w-12" />
           </Link>
-          <Link to={'https://github.com/DanielLenoz'}>
+          <Link
+            to={'https://github.com/DanielLenoz'}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <ImGithub className="jek h-12 w-12" />
           </Link>
         </article>
