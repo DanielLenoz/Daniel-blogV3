@@ -20,16 +20,16 @@ function Menu() {
   return (
     <header>
       <nav className="relative z-10 flex items-center justify-between bg-slate-100 px-5 dark:bg-slate-900 ">
-        <section className="flex space-x-3 items-center">
+        <section className="flex items-center space-x-3">
           <img src={themes ? logorojo : logoAzul} alt="mode change" />
           {themes ? (
             <RiMoonClearFill
-              className="h-12 w-12 fill-orange-600"
+              className="fade-in h-12 w-12 fill-orange-600 "
               onClick={toggleTheme}
             />
           ) : (
             <RiSunFill
-              className="h-12 w-12 fill-sky-600"
+              className="fade-in h-12 w-12 fill-sky-600 "
               onClick={toggleTheme}
             />
           )}
@@ -42,7 +42,7 @@ function Menu() {
             />
           ) : (
             <RiCloseFill
-              className="absolute -bottom-4 right-0 h-8 w-8 dark:fill-slate-100 "
+              className="fade-in-menu absolute -bottom-4 right-0 h-8 w-8 dark:fill-slate-100 "
               onClick={toggleMenu}
             />
           )}
